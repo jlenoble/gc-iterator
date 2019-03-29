@@ -2,6 +2,6 @@
   "build": "README.md",
   "files": ["docs/index.md"],
   "tableOfContents": {
-    "heading": "# gc-iterator\n\nGarbage collecting iterator helper classes"
+    "heading": "# gc-iterator\n\nGarbage collecting iterators"
   }
 }

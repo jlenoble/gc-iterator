@@ -22,7 +22,7 @@
       "gulp-babel": "^8.0.0"
     },
     "genVersion": "0.5.1",
-    "updated": "2019-03-28T19:00:55.632Z",
+    "updated": "2019-03-29T15:32:34.967Z",
     "created": "2019-03-23T13:49:45.192Z",
     "version": "0.0.0",
     "contributors": [],
@@ -30,7 +30,7 @@
     "deps": {},
     "peerDeps": {},
     "name": "gc-iterator",
-    "description": "Garbage collecting iterator helper classes",
+    "description": "Garbage collecting iterators",
     "author": "Jason Lenoble",
     "email": "jason.lenoble@gmail.com",
     "github": "jlenoble",

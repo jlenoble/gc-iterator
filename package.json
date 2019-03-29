@@ -1,6 +1,6 @@
 {
   "name": "gc-iterator",
-  "description": "Garbage collecting iterator helper classes",
+  "description": "Garbage collecting iterators",
   "version": "0.0.0",
   "keywords": [],
   "author": {
