@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import Iterator from '../src/set-selector';
+import {SetSelector as Iterator} from '../src/gc-iterator';
 
 describe('Testing SetSelector', function () {
   it(`Set of numbers`, function () {

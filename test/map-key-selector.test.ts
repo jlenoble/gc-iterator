@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import Iterator from '../src/map-key-selector';
+import {MapKeySelector as Iterator} from '../src/gc-iterator';
 
 describe('Testing MapKeySelector', function () {
   it(`Map of numbers`, function () {

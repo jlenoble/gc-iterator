@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import Iterator from '../src/map-key-shrinker';
+import {MapKeyShrinker as Iterator} from '../src/gc-iterator';
 
 describe('Testing MapKeyShrinker', function () {
   it(`Map of numbers`, function () {

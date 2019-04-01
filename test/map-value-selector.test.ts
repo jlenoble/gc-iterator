@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import Iterator from '../src/map-value-selector';
+import {MapValueSelector as Iterator} from '../src/gc-iterator';
 
 describe('Testing MapValueSelector', function () {
   it(`Map of numbers`, function () {

@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import Iterator from '../src/set-shrinker';
+import {SetShrinker as Iterator} from '../src/gc-iterator';
 
 describe('Testing SetShrinker', function () {
   it(`Set of numbers`, function () {
