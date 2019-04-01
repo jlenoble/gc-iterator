@@ -1,7 +1,7 @@
 import {expect} from 'chai';
-import {SetShrinker as Iterator} from '../src/gc-iterator';
+import {SetShrink as Iterator} from '../src/gc-iterator';
 
-describe('Testing SetShrinker', function () {
+describe('Testing SetShrink', function () {
   it(`Set of numbers`, function () {
     class MyIterator extends Iterator<number> {
       isValid () {

@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {SubsetValues as Iterator} from '../src/gc-iterator';
+import {Subset as Iterator} from '../src/gc-iterator';
 
 describe('Testing SubsetValues', function () {
   it(`Removing an element from reference`, function () {

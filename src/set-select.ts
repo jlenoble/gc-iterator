@@ -1,20 +1,16 @@
 import SetValues from './set-values';
 
-export default abstract class SetShrinker<V>
+export default abstract class SetSelect<V>
   extends SetValues<V>
   implements ISetValues<V>
 {
-  doAndNext (value: V): IteratorResult<V>  {
-    this.collection.delete(value);
-
+  doAndNext (): IteratorResult<V>  {
     do {
       const {value, done} = this.iterator.next();
 
       if (done || this.isValid(value)) {
         return {value, done};
       }
-
-      this.collection.delete(value);
     } while (true);
   }
 }

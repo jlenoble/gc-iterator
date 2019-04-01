@@ -1,4 +1,4 @@
-import MapValueShrinker from './map-value-shrinker';
+import MapValueShrinker from './map-shrink-values';
 
 export default class SubmapValues<K, V>
   extends MapValueShrinker<K, V>

@@ -1,7 +1,7 @@
 import {expect} from 'chai';
-import {SetSelector as Iterator} from '../src/gc-iterator';
+import {SetSelect as Iterator} from '../src/gc-iterator';
 
-describe('Testing SetSelector', function () {
+describe('Testing SetSelect', function () {
   it(`Set of numbers`, function () {
     class MyIterator extends Iterator<number> {
       isValid () {

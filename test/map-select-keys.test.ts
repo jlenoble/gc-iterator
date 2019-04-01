@@ -1,7 +1,7 @@
 import {expect} from 'chai';
-import {MapValueShrinker as Iterator} from '../src/gc-iterator';
+import {MapSelectKeys as Iterator} from '../src/gc-iterator';
 
-describe('Testing MapValueShrinker', function () {
+describe('Testing MapSelectKeys', function () {
   it(`Map of numbers`, function () {
     class MyIterator extends Iterator<string, number> {
       isValid () {
@@ -15,7 +15,7 @@ describe('Testing MapValueShrinker', function () {
     const i = new MyIterator(s);
 
     expect(Array.from(s)).to.eql(a);
-    expect(Array.from(i)).to.eql(Array.from(new Map(a).values()));
+    expect(Array.from(i)).to.eql(Array.from(new Map(a).keys()));
     expect(Array.from(s)).to.eql(a);
   });
 
@@ -33,8 +33,8 @@ describe('Testing MapValueShrinker', function () {
     const b: ReadonlyArray<[string, number]> = [['a', 0], ['c', 4], ['e', 8]];
 
     expect(Array.from(s)).to.eql(a);
-    expect(Array.from(i)).to.eql(Array.from(new Map(b).values()));
-    expect(Array.from(s)).to.eql(b);
+    expect(Array.from(i)).to.eql(Array.from(new Map(b).keys()));
+    expect(Array.from(s)).to.eql(a);
   });
 
   it(`Map of strings`, function () {
@@ -51,7 +51,7 @@ describe('Testing MapValueShrinker', function () {
 
 
     expect(Array.from(s)).to.eql(a);
-    expect(Array.from(i)).to.eql(Array.from(new Map(a).values()));
+    expect(Array.from(i)).to.eql(Array.from(new Map(a).keys()));
     expect(Array.from(s)).to.eql(a);
   });
 
@@ -70,7 +70,7 @@ describe('Testing MapValueShrinker', function () {
       ['f', 'baa']];
 
     expect(Array.from(s)).to.eql(a);
-    expect(Array.from(i)).to.eql(Array.from(new Map(b).values()));
-    expect(Array.from(s)).to.eql(b);
+    expect(Array.from(i)).to.eql(Array.from(new Map(b).keys()));
+    expect(Array.from(s)).to.eql(a);
   });
 });

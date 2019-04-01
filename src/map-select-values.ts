@@ -1,12 +1,10 @@
 import MapValues from './map-values';
 
-export default abstract class MapValueShrinker<K, V>
+export default abstract class MapSelectValues<K, V>
   extends MapValues<K, V>
   implements IMapValues<K, V>
 {
-  doAndNext ([key]: [K, V]): IteratorResult<V>  {
-    this.collection.delete(key);
-
+  doAndNext (): IteratorResult<V>  {
     do {
       const {value, done} = this.iterator.next();
 
@@ -15,8 +13,6 @@ export default abstract class MapValueShrinker<K, V>
       } else if (this.isValid(value)) {
         return {value: value[1], done};
       }
-
-      this.collection.delete(value[0]);
     } while (true);
   }
 }

@@ -1,7 +1,7 @@
 import {expect} from 'chai';
-import {SetSelectorTransform as Iterator} from '../src/gc-iterator';
+import {SetSelectTransform as Iterator} from '../src/gc-iterator';
 
-describe('Testing SetSelectorTransform', function () {
+describe('Testing SetSelectTransform', function () {
   it(`Squaring numbers`, function () {
     class MyIterator extends Iterator<number, number> {
       transform (value: number) {

@@ -1,4 +1,4 @@
-import MapKeyShrinker from './map-key-shrinker';
+import MapKeyShrinker from './map-shrink-keys';
 
 export default class SubmapKeys<K, V>
   extends MapKeyShrinker<K, V>

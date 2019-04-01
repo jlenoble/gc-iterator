@@ -1,6 +1,6 @@
-import MapEntryShrinker from './map-entry-shrinker';
+import MapEntryShrinker from './map-shrink';
 
-export default class SubmapKeys<K, V>
+export default class Submap<K, V>
   extends MapEntryShrinker<K, V>
   implements IMapEntries<K, V>
 {

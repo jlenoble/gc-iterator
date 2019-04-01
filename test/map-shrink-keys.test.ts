@@ -1,7 +1,7 @@
 import {expect} from 'chai';
-import {MapKeySelector as Iterator} from '../src/gc-iterator';
+import {MapShrinkKeys as Iterator} from '../src/gc-iterator';
 
-describe('Testing MapKeySelector', function () {
+describe('Testing MapShrinkKeys', function () {
   it(`Map of numbers`, function () {
     class MyIterator extends Iterator<string, number> {
       isValid () {
@@ -34,7 +34,7 @@ describe('Testing MapKeySelector', function () {
 
     expect(Array.from(s)).to.eql(a);
     expect(Array.from(i)).to.eql(Array.from(new Map(b).keys()));
-    expect(Array.from(s)).to.eql(a);
+    expect(Array.from(s)).to.eql(b);
   });
 
   it(`Map of strings`, function () {
@@ -71,6 +71,6 @@ describe('Testing MapKeySelector', function () {
 
     expect(Array.from(s)).to.eql(a);
     expect(Array.from(i)).to.eql(Array.from(new Map(b).keys()));
-    expect(Array.from(s)).to.eql(a);
+    expect(Array.from(s)).to.eql(b);
   });
 });

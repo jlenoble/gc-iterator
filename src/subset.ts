@@ -1,6 +1,6 @@
-import SetShrinker from './set-shrinker';
+import SetShrinker from './set-shrink';
 
-export default class SubsetValues<V>
+export default class Subset<V>
   extends SetShrinker<V>
   implements ISetValues<V>
 {

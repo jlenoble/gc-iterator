@@ -1,6 +1,6 @@
 import MapKeys from './map-keys';
 
-export default abstract class MapKeyShrinker<K, V>
+export default abstract class MapShrinkKeys<K, V>
   extends MapKeys<K, V>
   implements IMapKeys<K, V>
 {

@@ -1,7 +1,7 @@
 import {expect} from 'chai';
-import {SubmapEntries as Iterator} from '../src/gc-iterator';
+import {Submap as Iterator} from '../src/gc-iterator';
 
-describe('Testing SubmapEntries', function () {
+describe('Testing Submap', function () {
   it(`Removing an element from reference`, function () {
     const a: ReadonlyArray<[string, number]> = [['a', 0], ['b', 1], ['c', 4],
       ['d', 5], ['e', 8]];

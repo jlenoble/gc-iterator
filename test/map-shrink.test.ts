@@ -1,7 +1,7 @@
 import {expect} from 'chai';
-import {MapEntrySelector as Iterator} from '../src/gc-iterator';
+import {MapShrink as Iterator} from '../src/gc-iterator';
 
-describe('Testing MapEntrySelector', function () {
+describe('Testing MapShrink', function () {
   it(`Map of numbers`, function () {
     class MyIterator extends Iterator<string, number> {
       isValid () {
@@ -34,7 +34,7 @@ describe('Testing MapEntrySelector', function () {
 
     expect(Array.from(s)).to.eql(a);
     expect(Array.from(i)).to.eql(Array.from(new Map(b).entries()));
-    expect(Array.from(s)).to.eql(a);
+    expect(Array.from(s)).to.eql(b);
   });
 
   it(`Map of strings`, function () {
@@ -71,6 +71,6 @@ describe('Testing MapEntrySelector', function () {
 
     expect(Array.from(s)).to.eql(a);
     expect(Array.from(i)).to.eql(Array.from(new Map(b).entries()));
-    expect(Array.from(s)).to.eql(a);
+    expect(Array.from(s)).to.eql(b);
   });
 });
