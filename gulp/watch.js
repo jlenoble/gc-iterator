@@ -4,7 +4,7 @@ import {test} from './test';
 
 const allSrcGlob = [
   'src/**/*.ts',
-  'test/**/*.js'
+  'test/**/*.ts'
 ];
 const allBuildGlob = [
   'build/src/**/*.js',
