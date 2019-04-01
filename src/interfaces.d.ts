@@ -4,3 +4,4 @@ interface ISetValues<V> extends IterableIterator<V> {
 }
 
 interface ISetSelector<V> extends ISetValues<V> {}
+interface ISetShrinker<V> extends ISetValues<V> {}
