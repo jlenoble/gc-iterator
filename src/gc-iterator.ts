@@ -16,5 +16,6 @@ export {default as MapValueShrinker} from './map-value-shrinker';
 
 export {default as SubsetValues} from './subset-values';
 
+export {default as SubmapEntries} from './submap-entries';
 export {default as SubmapKeys} from './submap-keys';
 export {default as SubmapValues} from './submap-values';
