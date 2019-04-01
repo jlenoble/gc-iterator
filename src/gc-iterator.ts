@@ -15,3 +15,5 @@ export {default as MapValueSelector} from './map-value-selector';
 export {default as MapValueShrinker} from './map-value-shrinker';
 
 export {default as SubsetValues} from './subset-values';
+
+export {default as SubmapValues} from './submap-values';
