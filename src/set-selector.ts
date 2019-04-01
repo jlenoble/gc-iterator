@@ -2,7 +2,7 @@ import SetValues from './set-values';
 
 export default abstract class SetSelector<V>
   extends SetValues<V>
-  implements ISetSelector<V>
+  implements ISetValues<V>
 {
   doAndNext (): IteratorResult<V>  {
     do {

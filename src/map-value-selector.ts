@@ -2,7 +2,7 @@ import MapValues from './map-values';
 
 export default abstract class MapValueSelector<K, V>
   extends MapValues<K, V>
-  implements IMapValueSelector<K, V>
+  implements IMapValues<K, V>
 {
   doAndNext (): IteratorResult<V>  {
     do {

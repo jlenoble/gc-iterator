@@ -2,7 +2,7 @@ import SetValues from './set-values';
 
 export default abstract class SetShrinker<V>
   extends SetValues<V>
-  implements ISetSelector<V>
+  implements ISetValues<V>
 {
   doAndNext (value: V): IteratorResult<V>  {
     this.collection.delete(value);
