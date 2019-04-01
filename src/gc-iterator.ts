@@ -4,6 +4,7 @@ export {default as SetShrinker} from './set-shrinker';
 
 export {default as MapEntries} from './map-entries';
 export {default as MapEntrySelector} from './map-entry-selector';
+export {default as MapEntryShrinker} from './map-entry-shrinker';
 
 export {default as MapKeys} from './map-keys';
 export {default as MapKeySelector} from './map-key-selector';
