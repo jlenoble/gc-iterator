@@ -10,3 +10,4 @@ export {default as MapKeySelector} from './map-key-selector';
 
 export {default as MapValues} from './map-values';
 export {default as MapValueSelector} from './map-value-selector';
+export {default as MapValueShrinker} from './map-value-shrinker';
