@@ -3,6 +3,7 @@ export {default as SetSelect} from './set-select';
 export {default as SetShrink} from './set-shrink';
 export {default as SetTransform} from './set-transform';
 export {default as SetSelectTransform} from './set-select-transform';
+export {default as SetShrinkTransform} from './set-shrink-transform';
 
 export {default as MapEntries} from './map-entries';
 export {default as MapSelect} from './map-select';
