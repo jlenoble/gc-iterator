@@ -9,6 +9,7 @@ export default abstract class MapShrinkValues<K, V> extends MapValues<K, V>
       const { value, done } = this.iterator.next();
 
       if (done) {
+        // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
         return { done } as IteratorResult<V>;
       } else if (this.isValid(value)) {
         return { value: value[1], done };

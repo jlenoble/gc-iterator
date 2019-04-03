@@ -9,6 +9,7 @@ export default abstract class MapKeys<K, V> implements IMapKeys<K, V> {
     const { value, done } = this.iterator.next();
 
     if (done) {
+      // eslint-disable-next-line @typescript-eslint/no-object-literal-type-assertion
       return { done } as IteratorResult<K>;
     } else if (this.isValid(value)) {
       return { value: value[0], done };
