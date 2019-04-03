@@ -1,10 +1,10 @@
-import gulp from 'gulp';
-import del from 'del';
+import gulp from "gulp";
+import del from "del";
 
-import './clean';
+import "./clean";
 
 export const distClean = () => {
-  return del('lib');
+  return del("lib");
 };
 
-gulp.task('distclean', gulp.parallel('clean', distClean));
+gulp.task("distclean", gulp.parallel("clean", distClean));

@@ -1,15 +1,9 @@
-import gulp from 'gulp';
-import {build} from './build';
-import {test} from './test';
+import gulp from "gulp";
+import { build } from "./build";
+import { test } from "./test";
 
-const allSrcGlob = [
-  'src/**/*.ts',
-  'test/**/*.ts'
-];
-const allBuildGlob = [
-  'build/src/**/*.js',
-  'build/test/**/*.js'
-];
+const allSrcGlob = ["src/**/*.ts", "test/**/*.ts"];
+const allBuildGlob = ["build/src/**/*.js", "build/test/**/*.js"];
 
 export const watch = done => {
   gulp.watch(allSrcGlob, build);
@@ -17,4 +11,4 @@ export const watch = done => {
   done();
 };
 
-gulp.task('watch', watch);
+gulp.task("watch", watch);
