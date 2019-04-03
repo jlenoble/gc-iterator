@@ -2,11 +2,11 @@ import MapEntryShrinker from "./map-shrink";
 
 export default class Submap<K, V> extends MapEntryShrinker<K, V>
   implements IMapEntries<K, V> {
-  public constructor(
-    collection: Map<K, V>,
-    protected readonly reference: Map<K, V>
-  ) {
+  protected readonly reference: Map<K, V>;
+
+  public constructor(collection: Map<K, V>, reference: Map<K, V>) {
     super(collection);
+    this.reference = reference;
   }
 
   public [Symbol.iterator](): IterableIterator<[K, V]> {

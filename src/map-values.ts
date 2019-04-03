@@ -1,7 +1,9 @@
 export default abstract class MapValues<K, V> implements IMapValues<K, V> {
+  protected readonly collection: Map<K, V>;
   protected readonly iterator: Iterator<[K, V]>;
 
-  public constructor(protected readonly collection: Map<K, V>) {
+  public constructor(collection: Map<K, V>) {
+    this.collection = collection;
     this.iterator = collection.entries();
   }
 

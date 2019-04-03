@@ -1,8 +1,10 @@
 export default abstract class SetTransform<V, T>
   implements ISetTransform<V, T> {
+  protected readonly collection: Set<V>;
   protected readonly iterator: Iterator<V>;
 
-  public constructor(protected readonly collection: Set<V>) {
+  public constructor(collection: Set<V>) {
+    this.collection = collection;
     this.iterator = collection.values();
   }
 

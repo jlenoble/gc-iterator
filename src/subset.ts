@@ -1,8 +1,11 @@
 import SetShrinker from "./set-shrink";
 
 export default class Subset<V> extends SetShrinker<V> implements ISetValues<V> {
-  public constructor(collection: Set<V>, protected readonly reference: Set<V>) {
+  protected readonly reference: Set<V>;
+
+  public constructor(collection: Set<V>, reference: Set<V>) {
     super(collection);
+    this.reference = reference;
   }
 
   public [Symbol.iterator](): IterableIterator<V> {
