@@ -12,5 +12,8 @@
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint"
   ],
-  "rules": {}
+  "rules": {
+    "require-jsdoc": ["off"],
+    "prefer-arrow-callback": ["error"]
+  }
 }
