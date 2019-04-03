@@ -1,8 +1,8 @@
 import { expect } from "chai";
 import { Subset as Iterator } from "../src/gc-iterator";
 
-describe("Testing SubsetValues", function() {
-  it(`Removing an element from reference`, function() {
+describe("Testing SubsetValues", (): void => {
+  it(`Removing an element from reference`, (): void => {
     const a = [0, 1, 4, 5, 8];
     const b = [0, 4, 8];
     const reference = new Set(a);

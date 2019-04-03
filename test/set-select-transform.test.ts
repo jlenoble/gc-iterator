@@ -1,14 +1,14 @@
 import { expect } from "chai";
 import { SetSelectTransform as Iterator } from "../src/gc-iterator";
 
-describe("Testing SetSelectTransform", function() {
-  it(`Squaring numbers`, function() {
+describe("Testing SetSelectTransform", (): void => {
+  it(`Squaring numbers`, (): void => {
     class MyIterator extends Iterator<number, number> {
-      transform(value: number) {
+      transform(value: number): number {
         return value * value;
       }
 
-      isValid() {
+      isValid(): boolean {
         return true;
       }
     }
@@ -23,13 +23,13 @@ describe("Testing SetSelectTransform", function() {
     expect(Array.from(s)).to.eql(a);
   });
 
-  it(`Squaring even numbers`, function() {
+  it(`Squaring even numbers`, (): void => {
     class MyIterator extends Iterator<number, number> {
-      transform(value: number) {
+      transform(value: number): number {
         return value * value;
       }
 
-      isValid(value: number) {
+      isValid(value: number): boolean {
         return !(value % 2);
       }
     }
@@ -44,13 +44,13 @@ describe("Testing SetSelectTransform", function() {
     expect(Array.from(s)).to.eql(a);
   });
 
-  it(`Concatenating strings`, function() {
+  it(`Concatenating strings`, (): void => {
     class MyIterator extends Iterator<string, string> {
-      transform(value: string) {
+      transform(value: string): string {
         return value + value;
       }
 
-      isValid() {
+      isValid(): boolean {
         return true;
       }
     }
@@ -65,13 +65,13 @@ describe("Testing SetSelectTransform", function() {
     expect(Array.from(s)).to.eql(a);
   });
 
-  it(`Matching and concatenating strings`, function() {
+  it(`Matching and concatenating strings`, (): void => {
     class MyIterator extends Iterator<string, string> {
-      transform(value: string) {
+      transform(value: string): string {
         return value + value;
       }
 
-      isValid(value: string) {
+      isValid(value: string): boolean {
         return value.includes("ba");
       }
     }

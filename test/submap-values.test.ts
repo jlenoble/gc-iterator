@@ -1,8 +1,8 @@
 import { expect } from "chai";
 import { SubmapValues as Iterator } from "../src/gc-iterator";
 
-describe("Testing SubmapValues", function() {
-  it(`Removing an element from reference`, function() {
+describe("Testing SubmapValues", (): void => {
+  it(`Removing an element from reference`, (): void => {
     const a: ReadonlyArray<[string, number]> = [
       ["a", 0],
       ["b", 1],

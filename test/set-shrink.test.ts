@@ -1,10 +1,10 @@
 import { expect } from "chai";
 import { SetShrink as Iterator } from "../src/gc-iterator";
 
-describe("Testing SetShrink", function() {
-  it(`Set of numbers`, function() {
+describe("Testing SetShrink", (): void => {
+  it(`Set of numbers`, (): void => {
     class MyIterator extends Iterator<number> {
-      isValid() {
+      isValid(): boolean {
         return true;
       }
     }
@@ -18,9 +18,9 @@ describe("Testing SetShrink", function() {
     expect(Array.from(s)).to.eql(a);
   });
 
-  it(`Set of even numbers`, function() {
+  it(`Set of even numbers`, (): void => {
     class MyIterator extends Iterator<number> {
-      isValid(value: number) {
+      isValid(value: number): boolean {
         return !(value % 2);
       }
     }
@@ -35,9 +35,9 @@ describe("Testing SetShrink", function() {
     expect(Array.from(s)).to.eql(b);
   });
 
-  it(`Set of strings`, function() {
+  it(`Set of strings`, (): void => {
     class MyIterator extends Iterator<string> {
-      isValid() {
+      isValid(): boolean {
         return true;
       }
     }
@@ -51,9 +51,9 @@ describe("Testing SetShrink", function() {
     expect(Array.from(s)).to.eql(a);
   });
 
-  it(`Set of matching strings`, function() {
+  it(`Set of matching strings`, (): void => {
     class MyIterator extends Iterator<string> {
-      isValid(value: string) {
+      isValid(value: string): boolean {
         return value.includes("ba");
       }
     }

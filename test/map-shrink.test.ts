@@ -1,10 +1,10 @@
 import { expect } from "chai";
 import { MapShrink as Iterator } from "../src/gc-iterator";
 
-describe("Testing MapShrink", function() {
-  it(`Map of numbers`, function() {
+describe("Testing MapShrink", (): void => {
+  it(`Map of numbers`, (): void => {
     class MyIterator extends Iterator<string, number> {
-      isValid() {
+      isValid(): boolean {
         return true;
       }
     }
@@ -24,9 +24,9 @@ describe("Testing MapShrink", function() {
     expect(Array.from(s)).to.eql(a);
   });
 
-  it(`Map of even numbers`, function() {
+  it(`Map of even numbers`, (): void => {
     class MyIterator extends Iterator<string, number> {
-      isValid([, value]: [string, number]) {
+      isValid([, value]: [string, number]): boolean {
         return !(value % 2);
       }
     }
@@ -47,9 +47,9 @@ describe("Testing MapShrink", function() {
     expect(Array.from(s)).to.eql(b);
   });
 
-  it(`Map of strings`, function() {
+  it(`Map of strings`, (): void => {
     class MyIterator extends Iterator<string, string> {
-      isValid() {
+      isValid(): boolean {
         return true;
       }
     }
@@ -70,9 +70,9 @@ describe("Testing MapShrink", function() {
     expect(Array.from(s)).to.eql(a);
   });
 
-  it(`Map of matching strings`, function() {
+  it(`Map of matching strings`, (): void => {
     class MyIterator extends Iterator<string, string> {
-      isValid([, value]: [string, string]) {
+      isValid([, value]: [string, string]): boolean {
         return value.includes("ba");
       }
     }
