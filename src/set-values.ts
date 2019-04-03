@@ -1,11 +1,11 @@
 export default abstract class SetValues<V> implements ISetValues<V> {
   protected readonly iterator: Iterator<V>;
 
-  constructor(protected readonly collection: Set<V>) {
+  public constructor(protected readonly collection: Set<V>) {
     this.iterator = collection.values();
   }
 
-  next(): IteratorResult<V> {
+  public next(): IteratorResult<V> {
     const { value, done } = this.iterator.next();
 
     if (done || this.isValid(value)) {
@@ -15,7 +15,7 @@ export default abstract class SetValues<V> implements ISetValues<V> {
     return this.doAndNext(value);
   }
 
-  [Symbol.iterator](): IterableIterator<V> {
+  public [Symbol.iterator](): IterableIterator<V> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new (this.constructor as any)(this.collection);
   }

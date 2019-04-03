@@ -1,11 +1,11 @@
 export default abstract class MapEntries<K, V> implements IMapEntries<K, V> {
   protected readonly iterator: Iterator<[K, V]>;
 
-  constructor(protected readonly collection: Map<K, V>) {
+  public constructor(protected readonly collection: Map<K, V>) {
     this.iterator = collection.entries();
   }
 
-  next(): IteratorResult<[K, V]> {
+  public next(): IteratorResult<[K, V]> {
     const { value, done } = this.iterator.next();
 
     if (done || this.isValid(value)) {
@@ -15,7 +15,7 @@ export default abstract class MapEntries<K, V> implements IMapEntries<K, V> {
     return this.doAndNext(value);
   }
 
-  [Symbol.iterator](): IterableIterator<[K, V]> {
+  public [Symbol.iterator](): IterableIterator<[K, V]> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new (this.constructor as any)(this.collection);
   }

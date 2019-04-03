@@ -2,7 +2,7 @@ import MapValues from "./map-values";
 
 export default abstract class MapShrinkValues<K, V> extends MapValues<K, V>
   implements IMapValues<K, V> {
-  doAndNext([key]: [K, V]): IteratorResult<V> {
+  public doAndNext([key]: [K, V]): IteratorResult<V> {
     this.collection.delete(key);
 
     do {

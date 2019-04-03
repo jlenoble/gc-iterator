@@ -2,7 +2,7 @@ import MapEntries from "./map-entries";
 
 export default abstract class MapShrink<K, V> extends MapEntries<K, V>
   implements IMapEntries<K, V> {
-  doAndNext([key]: [K, V]): IteratorResult<[K, V]> {
+  public doAndNext([key]: [K, V]): IteratorResult<[K, V]> {
     this.collection.delete(key);
 
     do {

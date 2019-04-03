@@ -2,11 +2,11 @@ export default abstract class SetTransform<V, T>
   implements ISetTransform<V, T> {
   protected readonly iterator: Iterator<V>;
 
-  constructor(protected readonly collection: Set<V>) {
+  public constructor(protected readonly collection: Set<V>) {
     this.iterator = collection.values();
   }
 
-  next(): IteratorResult<T> {
+  public next(): IteratorResult<T> {
     const { value, done } = this.iterator.next();
 
     if (done || this.isValid(value)) {
@@ -16,7 +16,7 @@ export default abstract class SetTransform<V, T>
     return this.doAndNext(value);
   }
 
-  [Symbol.iterator](): IterableIterator<T> {
+  public [Symbol.iterator](): IterableIterator<T> {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new (this.constructor as any)(this.collection);
   }

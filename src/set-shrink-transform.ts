@@ -3,7 +3,7 @@ import SetTransform from "./set-transform";
 export default abstract class SetShrinkTransform<V, T>
   extends SetTransform<V, T>
   implements ISetTransform<V, T> {
-  doAndNext(value: V): IteratorResult<T> {
+  public doAndNext(value: V): IteratorResult<T> {
     this.collection.delete(value);
 
     do {

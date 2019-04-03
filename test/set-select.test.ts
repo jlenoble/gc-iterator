@@ -4,7 +4,7 @@ import { SetSelect as Iterator } from "../src/gc-iterator";
 describe("Testing SetSelect", (): void => {
   it(`Set of numbers`, (): void => {
     class MyIterator extends Iterator<number> {
-      isValid(): boolean {
+      public isValid(): boolean {
         return true;
       }
     }
@@ -20,7 +20,7 @@ describe("Testing SetSelect", (): void => {
 
   it(`Set of even numbers`, (): void => {
     class MyIterator extends Iterator<number> {
-      isValid(value: number): boolean {
+      public isValid(value: number): boolean {
         return !(value % 2);
       }
     }
@@ -37,7 +37,7 @@ describe("Testing SetSelect", (): void => {
 
   it(`Set of strings`, (): void => {
     class MyIterator extends Iterator<string> {
-      isValid(): boolean {
+      public isValid(): boolean {
         return true;
       }
     }
@@ -53,7 +53,7 @@ describe("Testing SetSelect", (): void => {
 
   it(`Set of matching strings`, (): void => {
     class MyIterator extends Iterator<string> {
-      isValid(value: string): boolean {
+      public isValid(value: string): boolean {
         return value.includes("ba");
       }
     }

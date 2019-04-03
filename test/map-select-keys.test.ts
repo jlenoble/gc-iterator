@@ -4,7 +4,7 @@ import { MapSelectKeys as Iterator } from "../src/gc-iterator";
 describe("Testing MapSelectKeys", (): void => {
   it(`Map of numbers`, (): void => {
     class MyIterator extends Iterator<string, number> {
-      isValid(): boolean {
+      public isValid(): boolean {
         return true;
       }
     }
@@ -26,7 +26,7 @@ describe("Testing MapSelectKeys", (): void => {
 
   it(`Map of even numbers`, (): void => {
     class MyIterator extends Iterator<string, number> {
-      isValid([, value]: [string, number]): boolean {
+      public isValid([, value]: [string, number]): boolean {
         return !(value % 2);
       }
     }
@@ -49,7 +49,7 @@ describe("Testing MapSelectKeys", (): void => {
 
   it(`Map of strings`, (): void => {
     class MyIterator extends Iterator<string, string> {
-      isValid(): boolean {
+      public isValid(): boolean {
         return true;
       }
     }
@@ -72,7 +72,7 @@ describe("Testing MapSelectKeys", (): void => {
 
   it(`Map of matching strings`, (): void => {
     class MyIterator extends Iterator<string, string> {
-      isValid([, value]: [string, string]): boolean {
+      public isValid([, value]: [string, string]): boolean {
         return value.includes("ba");
       }
     }
