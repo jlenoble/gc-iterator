@@ -1,17 +1,16 @@
-import SetTransform from './set-transform';
+import SetTransform from "./set-transform";
 
 export default abstract class SetShrinkTransform<V, T>
   extends SetTransform<V, T>
-  implements ISetTransform<V, T>
-{
-  doAndNext (value: V): IteratorResult<T>  {
+  implements ISetTransform<V, T> {
+  doAndNext(value: V): IteratorResult<T> {
     this.collection.delete(value);
 
     do {
-      const {value, done} = this.iterator.next();
+      const { value, done } = this.iterator.next();
 
       if (done || this.isValid(value)) {
-        return {value: this.transform(value), done};
+        return { value: this.transform(value), done };
       }
 
       this.collection.delete(value);

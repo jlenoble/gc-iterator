@@ -1,15 +1,13 @@
-import SetValues from './set-values';
+import SetValues from "./set-values";
 
-export default abstract class SetSelect<V>
-  extends SetValues<V>
-  implements ISetValues<V>
-{
-  doAndNext (): IteratorResult<V>  {
+export default abstract class SetSelect<V> extends SetValues<V>
+  implements ISetValues<V> {
+  doAndNext(): IteratorResult<V> {
     do {
-      const {value, done} = this.iterator.next();
+      const { value, done } = this.iterator.next();
 
       if (done || this.isValid(value)) {
-        return {value, done};
+        return { value, done };
       }
     } while (true);
   }
