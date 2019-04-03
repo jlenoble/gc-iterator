@@ -17,6 +17,7 @@ export default abstract class SetTransform<V, T>
   }
 
   [Symbol.iterator](): IterableIterator<T> {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new (this.constructor as any)(this.collection);
   }
 

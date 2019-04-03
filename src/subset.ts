@@ -6,6 +6,7 @@ export default class Subset<V> extends SetShrinker<V> implements ISetValues<V> {
   }
 
   [Symbol.iterator](): IterableIterator<V> {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new (this.constructor as any)(this.collection, this.reference);
   }
 

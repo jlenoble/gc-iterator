@@ -19,6 +19,7 @@ export default abstract class MapValues<K, V> implements IMapValues<K, V> {
   }
 
   [Symbol.iterator](): IterableIterator<V> {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new (this.constructor as any)(this.collection);
   }
 

@@ -7,6 +7,7 @@ export default class Submap<K, V> extends MapEntryShrinker<K, V>
   }
 
   [Symbol.iterator](): IterableIterator<[K, V]> {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return new (this.constructor as any)(this.collection, this.reference);
   }
 
