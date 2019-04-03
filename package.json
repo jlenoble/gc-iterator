@@ -44,11 +44,15 @@
     "@types/gulp-replace": "0.0.31",
     "@types/gulp-sourcemaps": "0.0.32",
     "@types/mocha": "^5.2.6",
+    "@typescript-eslint/eslint-plugin": "^1.6.0",
+    "@typescript-eslint/parser": "^1.6.0",
     "autoreload-gulp": "^0.4.1",
     "babel-plugin-add-module-exports": "^1.0.0",
     "chai": "^4.2.0",
     "del": "^4.0.0",
     "eslint-config-google": "^0.12.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
     "gulp": "^4.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-eslint": "^5.0.0",
@@ -60,6 +64,7 @@
     "markdown-include": "^0.4.3",
     "muter": "^0.7.0",
     "plumb-gulp": "^0.2.2",
+    "prettier": "^1.16.4",
     "typescript": "^3.4.1"
   },
   "peerDependencies": {}
