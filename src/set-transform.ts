@@ -1,5 +1,5 @@
 export default abstract class SetTransform<V, T>
-  implements ISetTransform<V, T> {
+  implements GCIterator.SetTransform<V, T> {
   protected readonly collection: Set<V>;
   protected readonly iterator: Iterator<V>;
 

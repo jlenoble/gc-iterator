@@ -1,7 +1,7 @@
 import SetValues from "./set-values";
 
 export default abstract class SetShrink<V> extends SetValues<V>
-  implements ISetValues<V> {
+  implements GCIterator.SetValues<V> {
   public doAndNext(value: V): IteratorResult<V> {
     this.collection.delete(value);
 

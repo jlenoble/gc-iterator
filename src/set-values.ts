@@ -1,4 +1,4 @@
-export default abstract class SetValues<V> implements ISetValues<V> {
+export default abstract class SetValues<V> implements GCIterator.SetValues<V> {
   protected readonly collection: Set<V>;
   protected readonly iterator: Iterator<V>;
 

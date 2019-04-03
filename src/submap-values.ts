@@ -1,7 +1,7 @@
 import MapValueShrinker from "./map-shrink-values";
 
 export default class SubmapValues<K, V> extends MapValueShrinker<K, V>
-  implements IMapValues<K, V> {
+  implements GCIterator.MapValues<K, V> {
   protected readonly reference: Map<K, V>;
 
   public constructor(collection: Map<K, V>, reference: Map<K, V>) {

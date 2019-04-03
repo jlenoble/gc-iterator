@@ -1,4 +1,5 @@
-export default abstract class MapKeys<K, V> implements IMapKeys<K, V> {
+export default abstract class MapKeys<K, V>
+  implements GCIterator.MapKeys<K, V> {
   protected readonly collection: Map<K, V>;
   protected readonly iterator: Iterator<[K, V]>;
 

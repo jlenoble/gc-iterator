@@ -1,7 +1,7 @@
 import MapValues from "./map-values";
 
 export default abstract class MapShrinkValues<K, V> extends MapValues<K, V>
-  implements IMapValues<K, V> {
+  implements GCIterator.MapValues<K, V> {
   public doAndNext([key]: [K, V]): IteratorResult<V> {
     this.collection.delete(key);
 

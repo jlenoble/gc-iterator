@@ -1,7 +1,7 @@
 import MapKeyShrinker from "./map-shrink-keys";
 
 export default class SubmapKeys<K, V> extends MapKeyShrinker<K, V>
-  implements IMapKeys<K, V> {
+  implements GCIterator.MapKeys<K, V> {
   protected readonly reference: Map<K, V>;
 
   public constructor(collection: Map<K, V>, reference: Map<K, V>) {

@@ -1,4 +1,5 @@
-export default abstract class MapEntries<K, V> implements IMapEntries<K, V> {
+export default abstract class MapEntries<K, V>
+  implements GCIterator.MapEntries<K, V> {
   protected readonly collection: Map<K, V>;
   protected readonly iterator: Iterator<[K, V]>;
 

@@ -1,6 +1,7 @@
 import SetShrinker from "./set-shrink";
 
-export default class Subset<V> extends SetShrinker<V> implements ISetValues<V> {
+export default class Subset<V> extends SetShrinker<V>
+  implements GCIterator.SetValues<V> {
   protected readonly reference: Set<V>;
 
   public constructor(collection: Set<V>, reference: Set<V>) {
