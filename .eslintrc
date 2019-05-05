@@ -1,19 +1,23 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018,
+    "ecmaVersion": 2019,
     "sourceType": "module",
     "ecmaFeatures": {}
   },
   "plugins": [],
   "extends": [
     "google",
-    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint"
   ],
   "rules": {
-    "require-jsdoc": ["off"],
-    "prefer-arrow-callback": ["error"]
+    "require-jsdoc": [
+      "off"
+    ],
+    "prefer-arrow-callback": [
+      "error"
+    ]
   }
 }

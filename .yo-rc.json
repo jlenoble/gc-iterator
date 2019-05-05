@@ -1,54 +1,28 @@
 {
   "generator-wupjs": {
-    "devDeps": {
-      "gulp": "^4.0.0",
-      "plumb-gulp": "^0.2.2",
-      "autoreload-gulp": "^0.4.1",
-      "gulp-sourcemaps": "^2.6.5",
-      "del": "^4.0.0",
-      "gulp-rename": "^1.4.0",
-      "gulp-replace": "^1.0.0",
-      "gulp-wrap": "^0.14.0",
-      "markdown-include": "^0.4.3",
-      "chai": "^4.2.0",
-      "gulp-eslint": "^5.0.0",
-      "eslint-config-google": "^0.12.0",
-      "gulp-mocha": "^6.0.0",
-      "muter": "^0.7.0",
-      "@babel/core": "^7.4.0",
-      "@babel/register": "^7.4.0",
-      "@babel/preset-env": "^7.4.2",
-      "babel-plugin-add-module-exports": "^1.0.0",
-      "gulp-babel": "^8.0.0"
-    },
-    "genVersion": "0.5.1",
-    "updated": "2019-03-29T15:32:34.967Z",
-    "created": "2019-03-23T13:49:45.192Z",
-    "version": "0.0.0",
-    "contributors": [],
-    "keywords": [],
-    "deps": {},
-    "peerDeps": {},
-    "name": "gc-iterator",
-    "description": "Garbage collecting iterators",
-    "author": "Jason Lenoble",
-    "email": "jason.lenoble@gmail.com",
-    "github": "jlenoble",
-    "preprocessors": [],
-    "license": "MIT",
-    "babel": [
-      "env"
+    "createdWith": "0.5.1",
+    "modifiedWith": "0.6.0-0",
+    "createdOn": "2019-03-23T13:49:45.192Z",
+    "modifiedOn": "2019-05-05T12:34:51.225Z",
+    "gulp": true,
+    "typescript": true,
+    "jsx": false,
+    "extensions": [
+      "ts"
     ],
-    "linters": [
-      "EsLint"
+    "server": true,
+    "client": false,
+    "devModuleTypes": [
+      "ES6"
     ],
-    "addons": [],
-    "testRunners": [
-      "Mocha"
+    "prodModuleTypes": [
+      "CommonJS"
     ],
-    "main": "lib/gc-iterator.js",
-    "files": [
-      "lib"
-    ]
+    "srcDir": "src",
+    "testDir": "test",
+    "buildDir": "build",
+    "docDir": "doc",
+    "libDir": "lib",
+    "gulpDir": "gulp"
   }
 }
